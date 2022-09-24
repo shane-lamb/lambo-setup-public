@@ -11,6 +11,8 @@ set ideajoin
 set ideamarks
 set textobj-indent
 set quickscope
+set which-key
+set timeoutlen=8000
 
 " Normally the { and } motions only match completely empty lines. With this plugin lines that only contain whitespace are also matched.
 set vim-paragraph-motion
