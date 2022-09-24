@@ -13,6 +13,7 @@ source $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.z
 source $HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
 source $HOMEBREW_PREFIX/opt/zinit/zinit.zsh
+zinit snippet OMZ::plugins/globalias/globalias.plugin.zsh
 
 source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
