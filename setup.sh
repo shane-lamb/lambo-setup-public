@@ -13,6 +13,13 @@ fi
 echo -e $IDEAVIMRC_CONTENT >> ~/.ideavimrc
 
 # zsh setup
+brew install powerlevel10k
+brew install zinit
+brew install zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting
+brew install asdf
+brew install --cask google-cloud-sdk
+brew install kubernetes-cli firebase-cli
+
 if [[ -L ~/.zshrc ]]; then
    rm ~/.zshrc
 fi

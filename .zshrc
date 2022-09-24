@@ -9,19 +9,21 @@ source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+BREW_PREFIX=$(brew --prefix)
 
-source /usr/local/opt/zinit/zinit.zsh
+source $BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+source $BREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $BREW_PREFIX/opt/zinit/zinit.zsh
+
+source $BREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 setopt HIST_IGNORE_ALL_DUPS
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-source /usr/local/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+source $BREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source <(kubectl completion zsh)
 
@@ -35,7 +37,7 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Fix gcloud running in python 3 environment: https://gehrcke.de/2021/11/gcloud-on-python-3-10-module-collections-has-no-attribute-mapping/
 # export CLOUDSDK_PYTHON="/usr/bin/python2"
 
-alias java11='export JAVA_HOME=/usr/local/Cellar/openjdk@11/11.0.15'
+alias java11='export JAVA_HOME=$BREW_PREFIX/Cellar/openjdk@11/11.0.15'
 # default to Java11
 java11
 

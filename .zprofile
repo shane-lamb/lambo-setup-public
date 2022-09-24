@@ -18,8 +18,10 @@
 path+=("$HOME/Library/Android/sdk/platform-tools")
 path+=("$HOME/Library/Android/sdk/emulator")
 
+BREW_PREFIX=$(brew --prefix)
+
 # setup asdf
-. /usr/local/opt/asdf/asdf.sh
+. $BREW_PREFIX/opt/asdf/libexec/asdf.sh
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
