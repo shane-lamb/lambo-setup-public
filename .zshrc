@@ -26,7 +26,7 @@ source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source ~/alias.zsh
 
-path+=("$HOME/.local/bin")
+path+=("$HOME/.local/bin") # Used by cloud_sql_proxy and pipenv
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"

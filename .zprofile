@@ -18,8 +18,12 @@
 path+=("$HOME/Library/Android/sdk/platform-tools")
 path+=("$HOME/Library/Android/sdk/emulator")
 
-# Seems to be necessary to bootstrap brew on M1
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Bootstrap homebrew
+if [[ -d "/opt/homebrew" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)" # for M1
+else
+    eval "$(/usr/local/bin/brew shellenv)" # for Intel
+fi
 
 # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:${FPATH}"
@@ -28,4 +32,3 @@ FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:${FPATH}"
 . $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
 
 export USE_GKE_GCLOUD_AUTH_PLUGIN=True
-
