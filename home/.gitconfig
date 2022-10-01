@@ -1,0 +1,6 @@
+[user]
+	name = Shane Lamb
+	email = shanelamb1@gmail.com
+[core]
+	autocrlf = input
+	excludesfile = ~/.config/global.gitignore

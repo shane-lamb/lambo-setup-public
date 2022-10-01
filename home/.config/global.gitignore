@@ -1,0 +1,8 @@
+# Mac
+.DS_Store
+
+# IntelliJ/Jetbrains
+../.idea/
+
+# Place to store personal scripts/things to keep uncommitted
+.z/
