@@ -71,7 +71,12 @@ ln -s "$H"/.config/global.gitignore ~/.config/global.gitignore
 brew install gh `#github cli` \
      kubernetes-cli \
      firebase-cli
-
-# todo
+brew install --cask obsidian \
+                    karabiner-elements
 # brew install --cask intellij-idea
-# brew install --cask obsidian
+
+# karabiner-elements
+if [[ -L ~/.config/karabiner/karabiner.json ]]; then
+   rm ~/.config/karabiner/karabiner.json
+fi
+ln -s "$SCRIPT_DIR"/karabiner.json ~/.config/karabiner/karabiner.json
