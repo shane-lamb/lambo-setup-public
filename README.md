@@ -2,7 +2,7 @@
 My mac setup: brew installs, zsh setup, etc.
 
 # Steps
-1. Run `setup.sh` script remotely:
+1. Run `setup1.sh` script remotely:
 ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/shane-lamb/lambo-setup-public/HEAD/setup1.sh)"
 ```
