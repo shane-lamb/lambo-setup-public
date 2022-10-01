@@ -1,6 +1,13 @@
 # lambo-setup-public
 My mac setup: brew installs, zsh setup, etc.
 
+# Steps
+1. Run `setup.sh` script remotely:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/shane-lamb/lambo-setup-public/HEAD/setup1.sh)"
+```
+2. Run `setup2.sh` locally once the repo has been cloned.
+
 # Homebrew: Configuring completions in zsh
 https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
 Additionally, if you receive “zsh compinit: insecure directories” warnings when attempting to load these completions, you may need to run this:
