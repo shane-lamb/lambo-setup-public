@@ -27,7 +27,7 @@ echo -e $IDEAVIMRC_CONTENT >> ~/.ideavimrc
 
 # zsh setup
 brew install zsh \
-             powerlevel10k \
+             romkatv/powerlevel10k/powerlevel10k \
              zinit \
              zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
              asdf # node/python/etc version manager
