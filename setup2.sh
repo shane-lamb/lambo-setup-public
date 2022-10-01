@@ -11,6 +11,13 @@ if [[ ! -d $PRIVATE ]]; then
    mkdir "$PRIVATE"
 fi
 
+# Bootstrap homebrew (if not done already)
+if [[ -d "/opt/homebrew" ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)" # for M1
+else
+    eval "$(/usr/local/bin/brew shellenv)" # for Intel
+fi
+
 # vim setup
 IDEAVIMRC_CONTENT="source $VIM/shared.vim\nsource $VIM/idea.vim"
 if [[ -f ~/.ideavimrc ]]; then
