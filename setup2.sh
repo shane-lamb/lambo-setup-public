@@ -82,10 +82,10 @@ ln -s "$H"/.ssh/config ~/.ssh/config
 
 # other stuff
 brew install gh `#github cli` \
-     kubernetes-cli \
      firebase-cli
 brew install --cask obsidian \
-                    karabiner-elements
+                    karabiner-elements \
+                    docker
 # brew install --cask intellij-idea
 
 # karabiner-elements
