@@ -56,6 +56,13 @@ if [[ -L ~/alias.zsh ]]; then
 fi
 ln -s "$PRIVATE"/alias.zsh ~/alias.zsh
 
+# asdf setup
+asdf plugin add nodejs || true
+if [[ -L ~/.asdfrc ]]; then
+   rm ~/.asdfrc
+fi
+ln -s "$H"/.asdfrc ~/.asdfrc
+
 # git
 if [[ -L ~/.gitconfig ]]; then
    rm ~/.gitconfig
