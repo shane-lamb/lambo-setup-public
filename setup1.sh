@@ -14,6 +14,8 @@ pbcopy < ~/.ssh/id_ed25519.pub
 
 # now register the public key with your github account
 open "https://github.com/settings/keys"
+echo 'Now register your key with github. Press space when done to continue.'
+read -r -s -d ' '
 
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"

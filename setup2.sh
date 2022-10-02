@@ -67,6 +67,12 @@ if [[ -L ~/.config/global.gitignore ]]; then
 fi
 ln -s "$H"/.config/global.gitignore ~/.config/global.gitignore
 
+# ssh config
+if [[ -L ~/.ssh/config ]]; then
+   rm ~/.ssh/config
+fi
+ln -s "$H"/.ssh/config ~/.ssh/config
+
 # other stuff
 brew install gh `#github cli` \
      kubernetes-cli \
