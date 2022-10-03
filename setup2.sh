@@ -31,7 +31,9 @@ brew install zsh \
              zinit \
              zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
              asdf # node/python/etc version manager
+
 brew install --cask google-cloud-sdk
+gcloud components install cloud_sql_proxy --quiet
 
 if [[ -L ~/.zshrc ]]; then
    rm ~/.zshrc
@@ -85,11 +87,19 @@ brew install gh `#github cli` \
      firebase-cli
 brew install --cask obsidian \
                     karabiner-elements \
-                    docker
-# brew install --cask intellij-idea
+                    docker \
+                    wezterm \
+                    raycast \
+                    jetbrains-toolbox
 
 # karabiner-elements
 if [[ -L ~/.config/karabiner/karabiner.json ]]; then
    rm ~/.config/karabiner/karabiner.json
 fi
 ln -s "$SCRIPT_DIR"/karabiner.json ~/.config/karabiner/karabiner.json
+
+# wezterm / terminal setup
+if [[ -L ~/.wezterm.lua ]]; then
+   rm ~/.wezterm.lua
+fi
+ln -s "$H"/.wezterm.lua ~/.wezterm.lua
