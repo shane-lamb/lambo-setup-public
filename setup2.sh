@@ -60,6 +60,7 @@ ln -s "$PRIVATE"/alias.zsh ~/alias.zsh
 
 # asdf setup
 asdf plugin add nodejs || true
+asdf plugin add ruby || true
 if [[ -L ~/.asdfrc ]]; then
    rm ~/.asdfrc
 fi
@@ -98,8 +99,14 @@ if [[ -L ~/.config/karabiner/karabiner.json ]]; then
 fi
 ln -s "$SCRIPT_DIR"/karabiner.json ~/.config/karabiner/karabiner.json
 
-# wezterm / terminal setup
+# wezterm config
 if [[ -L ~/.wezterm.lua ]]; then
    rm ~/.wezterm.lua
 fi
 ln -s "$H"/.wezterm.lua ~/.wezterm.lua
+
+# wezterm shell integration
+if [[ -L ~/.config/wezterm.sh ]]; then
+   rm ~/.config/wezterm.sh
+fi
+ln -s "$H"/.config/wezterm.sh ~/.config/wezterm.sh
