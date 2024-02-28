@@ -18,3 +18,10 @@ Note: It won't work with community edition, you need Ultimate.
 ## Some cool plugins
 - Darcula Darker Theme
 - IdeaVim (+ related plugins: IdeaVim-Quickscope, Which-Key and IdeaVim-EasyMotion(w/ AceJump))
+
+# Stuff
+I needed to set my input source as "Unicode Hex Input" so that I could use the `Alt` key on my keyboard:
+![img_1.png](img_1.png)
+
+`Ctrl+space` is reserved as an OS shortcut by default, you'll need to go and disable this so you can use it for completion in your IDE:
+![img.png](img.png)
