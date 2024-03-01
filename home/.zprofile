@@ -15,20 +15,13 @@
 # export ANDROID_HOME=~/Library/Android/sdk
 # export ANDROID_SDK_ROOT=~/Library/Android/sdk
 # export ANDROID_AVD_HOME=~/.android/avd
-path+=("$HOME/Library/Android/sdk/platform-tools")
-path+=("$HOME/Library/Android/sdk/emulator")
+# path+=("$HOME/Library/Android/sdk/platform-tools")
+# path+=("$HOME/Library/Android/sdk/emulator")
 
-# Bootstrap homebrew
-if [[ -d "/opt/homebrew" ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)" # for M1
-else
-    eval "$(/usr/local/bin/brew shellenv)" # for Intel
-fi
-
-# https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
-FPATH="$HOMEBREW_PREFIX/share/zsh/site-functions:${FPATH}"
+# Jetbrains Toolbox
+path+=("$HOME/Library/Application Support/JetBrains/Toolbox/scripts")
 
 # setup asdf
-. $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
+. "$HOME/.asdf/asdf.sh"
 
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+# export USE_GKE_GCLOUD_AUTH_PLUGIN=True

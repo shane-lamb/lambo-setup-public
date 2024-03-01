@@ -12,11 +12,7 @@ if [[ ! -d $PRIVATE ]]; then
 fi
 
 # Bootstrap homebrew (if not done already)
-if [[ -d "/opt/homebrew" ]]; then
-    eval "$(/opt/homebrew/bin/brew shellenv)" # for M1
-else
-    eval "$(/usr/local/bin/brew shellenv)" # for Intel
-fi
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # vim setup
 IDEAVIMRC_CONTENT="source $VIM/shared.vim\nsource $VIM/idea.vim"
@@ -27,13 +23,13 @@ echo -e $IDEAVIMRC_CONTENT >> ~/.ideavimrc
 
 # zsh setup
 brew install zsh \
-             romkatv/powerlevel10k/powerlevel10k \
-             zinit \
-             zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting \
-             asdf # node/python/etc version manager
+             powerlevel10k \
+             zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting
 
-brew install --cask google-cloud-sdk
-gcloud components install cloud_sql_proxy --quiet
+# install asdf: node/python/etc version manager
+if [[ ! -d ~/.asdf ]]; then
+   git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
+fi
 
 if [[ -L ~/.zshrc ]]; then
    rm ~/.zshrc
@@ -44,6 +40,8 @@ if [[ -L ~/.zprofile ]]; then
    rm ~/.zprofile
 fi
 ln -s "$H"/.zprofile ~/.zprofile
+
+mkdir -p ~/.config
 
 if [[ -L ~/.config/.p10k.zsh ]]; then
    rm ~/.config/.p10k.zsh
@@ -84,16 +82,12 @@ fi
 ln -s "$H"/.ssh/config ~/.ssh/config
 
 # other stuff
-brew install gh `#github cli` \
-     firebase-cli
-brew install --cask obsidian \
-                    karabiner-elements \
-                    docker \
-                    wezterm \
-                    raycast \
-                    jetbrains-toolbox
+brew install gh # github cli
+brew install --cask karabiner-elements \
+                    wezterm
 
 # karabiner-elements
+mkdir -p ~/.config/karabiner
 if [[ -L ~/.config/karabiner/karabiner.json ]]; then
    rm ~/.config/karabiner/karabiner.json
 fi
@@ -110,3 +104,7 @@ if [[ -L ~/.config/wezterm.sh ]]; then
    rm ~/.config/wezterm.sh
 fi
 ln -s "$H"/.config/wezterm.sh ~/.config/wezterm.sh
+
+# system preferences
+# enable key repeat on hold
+defaults write -g ApplePressAndHoldEnabled 1
