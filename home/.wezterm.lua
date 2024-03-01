@@ -14,7 +14,7 @@ return {
   window_background_opacity = 0.8,
   window_decorations = 'RESIZE',
   -- color schemes: https://wezfurlong.org/wezterm/colorschemes/index.html
-  --color_scheme = 'AlienBlood',
-  color_scheme = 'AdventureTime',
-  --color_scheme = 'Apathy (base16)',
+  -- color_scheme = 'AlienBlood',
+  -- color_scheme = 'AdventureTime',
+  -- color_scheme = 'Apathy (base16)',
 }
