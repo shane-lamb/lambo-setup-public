@@ -49,3 +49,6 @@ then
   autoload -Uz compinit
   compinit
 fi
+
+# wezterm shell integration: https://wezfurlong.org/wezterm/shell-integration.html
+source ~/.config/wezterm.sh

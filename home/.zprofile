@@ -25,3 +25,6 @@ path+=("$HOME/Library/Application Support/JetBrains/Toolbox/scripts")
 . "$HOME/.asdf/asdf.sh"
 
 # export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+# Added by OrbStack: command-line tools and integration
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :

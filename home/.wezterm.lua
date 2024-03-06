@@ -11,8 +11,16 @@ return {
     { key = 'UpArrow', mods = 'SHIFT', action = act.ScrollToPrompt(-1) },
     { key = 'DownArrow', mods = 'SHIFT', action = act.ScrollToPrompt(1) },
   },
+  mouse_bindings = {
+    {
+      event = { Down = { streak = 3, button = 'Left' } },
+      action = act.SelectTextAtMouseCursor 'SemanticZone',
+      mods = 'NONE',
+    },
+  },
   window_background_opacity = 0.8,
   window_decorations = 'RESIZE',
+  font_size = 13.5,
   -- color schemes: https://wezfurlong.org/wezterm/colorschemes/index.html
   -- color_scheme = 'AlienBlood',
   -- color_scheme = 'AdventureTime',

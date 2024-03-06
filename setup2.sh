@@ -26,6 +26,12 @@ brew install zsh \
              powerlevel10k \
              zsh-autosuggestions zsh-history-substring-search zsh-syntax-highlighting
 
+# for docker containers
+brew install orbstack
+
+# needed to build ruby
+brew install libyaml
+
 # install asdf: node/python/etc version manager
 if [[ ! -d ~/.asdf ]]; then
    git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.14.0
