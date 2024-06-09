@@ -16,6 +16,236 @@
                 },
                 "rules": [
                     {
+                        "description": "Modify `;` to act as a modifier, eg a to ä",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "semicolon"
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "semicolon_modifier_active",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "semicolon"
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "semicolon_modifier_active",
+                                            "value": 0
+                                        }
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "semicolon_modifier_active",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "d"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": ["command", "shift"]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "semicolon_modifier_active",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "f"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde",
+                                        "modifiers": ["command"]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "semicolon_modifier_active",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w"
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'Safari.app'"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "semicolon_modifier_active",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i"
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a 'IntelliJ Idea Ultimate'"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "semicolon_modifier_active",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "t"
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a wezterm"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "semicolon_modifier_active",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "v"
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a obsidian"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "semicolon_modifier_active",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "q"
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "open -a mindmac"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "semicolon_modifier_active",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_plus",
+                                        "modifiers": ["left_alt"]
+                                    },
+                                    {
+                                        "key_code": "0",
+                                        "modifiers": ["left_alt"]
+                                    },
+                                    {
+                                        "key_code": "0",
+                                        "modifiers": ["left_alt"]
+                                    },
+                                    {
+                                        "key_code": "e",
+                                        "modifiers": ["left_alt"]
+                                    },
+                                    {
+                                        "key_code": "4",
+                                        "modifiers": ["left_alt"]
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "semicolon_modifier_active",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "s"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "keypad_plus",
+                                        "modifiers": ["left_alt"]
+                                    },
+                                    {
+                                        "key_code": "0",
+                                        "modifiers": ["left_alt"]
+                                    },
+                                    {
+                                        "key_code": "0",
+                                        "modifiers": ["left_alt"]
+                                    },
+                                    {
+                                        "key_code": "f",
+                                        "modifiers": ["left_alt"]
+                                    },
+                                    {
+                                        "key_code": "6",
+                                        "modifiers": ["left_alt"]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
                         "description": "Change right_command+hjkl to arrow keys",
                         "manipulators": [
                             {
