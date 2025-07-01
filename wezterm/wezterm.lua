@@ -18,7 +18,7 @@ return {
       mods = 'NONE',
     },
   },
-  window_background_opacity = 0.8,
+  window_background_opacity = 0.5,
   window_decorations = 'RESIZE',
   font_size = 13.5,
   -- color schemes: https://wezfurlong.org/wezterm/colorschemes/index.html

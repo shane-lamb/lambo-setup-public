@@ -17,11 +17,8 @@ open "https://github.com/settings/keys"
 echo 'Now register your key with github. Press space when done to continue.'
 read -r -s -d ' '
 
-# install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 # make a source directory
 mkdir -p ~/source
 
-# checkout the setup repo (then continue with setup2.sh)
+# checkout the setup repo, to enable running other scripts locally
 cd ~/source && git clone git@github.com:shane-lamb/lambo-setup-public.git

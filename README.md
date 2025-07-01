@@ -2,11 +2,11 @@
 My mac setup: brew installs, zsh setup, etc.
 
 # Steps
-1. Run `setup1.sh` script remotely:
+1. Run the `bootstrap.sh` script remotely:
 ```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/shane-lamb/lambo-setup-public/HEAD/setup1.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/shane-lamb/lambo-bootstrap-public/HEAD/setup.sh)"
 ```
-2. Run `setup2.sh` locally once the repo has been cloned.
+2. Run other setup files as needed locally, since the repo will have been cloned.
 
 # IntelliJ
 ## Sync settings and plugins

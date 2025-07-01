@@ -165,24 +165,6 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "q"
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "open -a mindmac"
-                                    }
-                                ]
-                            },
-                            {
-                                "type": "basic",
-                                "conditions": [
-                                    {
-                                        "type": "variable_if",
-                                        "name": "semicolon_modifier_active",
-                                        "value": 1
-                                    }
-                                ],
-                                "from": {
                                     "key_code": "a"
                                 },
                                 "to": [

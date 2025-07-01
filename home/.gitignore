@@ -1,0 +1,4 @@
+.zshrc
+.zprofile
+.ssh/config
+!base/*
