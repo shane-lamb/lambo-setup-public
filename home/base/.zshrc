@@ -24,14 +24,9 @@ source $HOMEBREW_PREFIX/share/zsh-history-substring-search/zsh-history-substring
 
 source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# brew completions: https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
-fi
+# init completions
+autoload -Uz compinit
+compinit
 
 # wezterm shell integration: https://wezfurlong.org/wezterm/shell-integration.html
 source ~/.config/wezterm.sh
