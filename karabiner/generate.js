@@ -1,12 +1,16 @@
 const semicolonKeyMappings = {
+    '1': toSuper('1'), // for window resizing with rectangle
+    '2': toSuper('2'), // for window resizing with rectangle
+    '3': toSuper('3'), // for window resizing with rectangle
+    '4': toSuper('4'), // for window resizing with rectangle
+    'a': aWithDots(),
     'd': toKey('grave_accent_and_tilde', ['command', 'shift']), // prev window in app group
     'f': toKey('grave_accent_and_tilde', ['command']), // next window in app group
-    'w': open('Safari.app'), // (w)eb
     'i': open('IntelliJ Idea Ultimate'), // (i)de
+    's': oWithDots(),
     't': open('wezterm'), // (t)erminal
     'v': open('obsidian'), // (v)ault
-    'a': aWithDots(),
-    's': oWithDots(),
+    'w': open('Safari.app'), // (w)eb
 }
 
 const config = require('./base.karabiner.json')
@@ -53,6 +57,10 @@ function toKey(keyCode, modifiers = []) {
             modifiers
         }
     ]
+}
+
+function toSuper(keyCode) {
+    return toKey(keyCode, ['left_command', 'left_alt', 'left_control', 'left_shift'])
 }
 
 function aWithDots() {
