@@ -4,3 +4,5 @@
 [core]
 	autocrlf = input
 	excludesfile = ~/.config/global.gitignore
+[github]
+    user = shane-lamb
