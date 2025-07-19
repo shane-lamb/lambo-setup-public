@@ -1,0 +1,12 @@
+{
+  "name": "lambo-setup-public",
+  "description": "Code to generate karabiner config, etc",
+  "version": "1.0.0",
+  "scripts": {},
+  "author": "Shane Lamb",
+  "devDependencies": {
+    "@types/node": "^24.0.15",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",      // Match Node 22's supported syntax
+    "module": "CommonJS",
+    "esModuleInterop": true, // Makes default imports from CJS work right
+    "strict": true,
+    "moduleResolution": "Node",
+    "skipLibCheck": true,    // Faster, ignores .d.ts errors
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"]
+  }
+}

@@ -15,6 +15,22 @@ https://www.jetbrains.com/help/idea/sharing-your-ide-settings.html#IDE_settings_
 
 Note: It won't work with community edition, you need Ultimate.
 
+## Useful key bindings
+
+| key     | action       | note                     |
+|---------|--------------|--------------------------|
+| CMD + 0 | Commit       | Open/close changed files |
+| CMD + K | Commit...    | Enter commit message     |
+| CMD + 1 | Project      | Open/close file browser  |
+| CMD + e | Recent Files |                          |
+
+## My custom key bindings
+
+| key       | action             | note                         |
+|-----------|--------------------|------------------------------|
+| CMD + ;   | Terminal           | Open/close embedded terminal |
+| SUPER + i | Manage Projects... | Open project selector        |
+
 ## Some cool plugins
 - Darcula Darker Theme
 - IdeaVim + IdeaVim-Quickscope
