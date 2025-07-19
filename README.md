@@ -26,10 +26,11 @@ Note: It won't work with community edition, you need Ultimate.
 
 ## My custom key bindings
 
-| key       | action             | note                         |
-|-----------|--------------------|------------------------------|
-| CMD + ;   | Terminal           | Open/close embedded terminal |
-| SUPER + i | Manage Projects... | Open project selector        |
+| key       | action             | note                                       |
+|-----------|--------------------|--------------------------------------------|
+| CMD + ;   | Terminal           | Open/close embedded terminal               |
+| SUPER + i | Manage Projects... | Open project selector (; + i in Karabiner) |
+| SUPER + w | Close Project      | Mapped to ; + q in Karabiner               |
 
 ## Some cool plugins
 - Darcula Darker Theme

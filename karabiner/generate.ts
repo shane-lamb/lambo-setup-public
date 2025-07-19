@@ -10,12 +10,13 @@ const keyToManipulators: { [keyCode: string]: ManipulatorFunc } = {
     '4': toSuper('4'), // for window resizing with rectangle
     a: toKeys(keyCombos.aWithDots),
     d: toKey(keyCombos.prevAppWindow),
-    f: toKey('grave_accent_and_tilde', ['left_command']), // next window in app group
+    f: toKey(keyCombos.nextAppWindow),
     i: open('IntelliJ Idea Ultimate', 'com.jetbrains.intellij', keyCombos.super('i')), // (i)de or (i)ntellij
     s: toKeys(keyCombos.oWithDots),
     t: open('wezterm'), // (t)erminal
     v: open('obsidian'), // (v)ault
-    w: open('Safari.app', 'com.apple.Safari'), // (w)eb
+    w: open('Safari.app', 'com.apple.Safari', keyCombo('l', ['left_command'])), // (w)eb
+    q: toSuper('w'), // close project window in IntelliJ
 }
 
 const config: KarabinerConfig = require('./base.karabiner.json')
