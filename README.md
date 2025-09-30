@@ -29,6 +29,7 @@ Note: It won't work with community edition, you need Ultimate.
 | key       | action             | note                                       |
 |-----------|--------------------|--------------------------------------------|
 | CMD + ;   | Terminal           | Open/close embedded terminal               |
+| CMD + e   | Search everywhere  | Usually shift + shift                      |
 | SUPER + i | Manage Projects... | Open project selector (; + i in Karabiner) |
 | SUPER + w | Close Project      | Mapped to ; + q in Karabiner               |
 
