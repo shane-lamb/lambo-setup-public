@@ -32,6 +32,35 @@
                                         }
                                     }
                                 ]
+                            },
+                            {
+                                "type": "basic",
+                                "conditions": [
+                                    {
+                                        "type": "variable_if",
+                                        "name": "semicolon_modifier_active",
+                                        "value": 1
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a"
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "alt_modifier_active",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "alt_modifier_active",
+                                            "value": 0
+                                        }
+                                    }
+                                ]
                             }
                         ]
                     },

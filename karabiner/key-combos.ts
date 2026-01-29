@@ -6,6 +6,9 @@ export const keyCombos = {
     super: (keyCode: string) => keyCombo(keyCode, ['left_command', 'left_alt', 'left_control', 'left_shift']),
     nextAppWindow: keyCombo('grave_accent_and_tilde', ['left_command']),
     prevAppWindow: keyCombo('grave_accent_and_tilde', ['left_command', 'left_shift']),
+    nextTab: keyCombo('tab', ['left_control']),
+    prevTab: keyCombo('tab', ['left_shift', 'left_control']),
+    none: keyCombo('vk_none')
 }
 
 function altSeries(keyCodes: string[]): KeyCombo[] {
