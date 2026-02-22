@@ -22,6 +22,7 @@ const semicolonManipulators: { [keyCode: string]: ManipulatorFunc } = {
     '2': toSuper('2'), // for window resizing with rectangle
     '3': toSuper('3'), // for window resizing with rectangle
     '4': toSuper('4'), // for window resizing with rectangle
+    '5': toSuper('5'), // for window resizing with rectangle
     a: toKeys(keyCombos.aWithDots),
     d: toKey('delete_or_backspace'),
     f: toKey('delete_forward'),
@@ -33,7 +34,7 @@ const semicolonManipulators: { [keyCode: string]: ManipulatorFunc } = {
     s: toKey('return_or_enter'),
     t: open('wezterm'), // (t)erminal
     v: open('obsidian', 'md.obsidian', keyCombos.super('v')), // (v)ault
-    w: open('Google Chrome.app', 'com.apple.Safari', keyCombo('l', ['left_command'])), // (w)eb
+    w: open('Dia', 'company.thebrowser.dia', keyCombo('l', ['left_command'])), // (w)eb
     q: toSuper('w'), // close project window in IntelliJ
     comma: toKey(keyCombos.prevTab),
     period: toKey(keyCombos.nextTab),
